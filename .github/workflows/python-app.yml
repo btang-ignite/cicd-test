@@ -69,6 +69,7 @@ jobs:
     - name: ls
       run: ls
     - name: find poetry version
+      run: |
         export PATH="$HOME/.poetry/bin:$PATH"
         source $HOME/.poetry/env
         poetry --version
