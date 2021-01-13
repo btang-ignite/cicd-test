@@ -47,6 +47,11 @@ jobs:
         export PATH="$HOME/.poetry/bin:$PATH"
         source $HOME/.poetry/env
         poetry run pytest
+    - name: Build whl
+        export PATH="$HOME/.poetry/bin:$PATH"
+        source $HOME/.poetry/env
+        poetry build
+        echo ls
   deployment:
     needs: integration
     runs-on: ubuntu-latest

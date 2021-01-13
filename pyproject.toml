@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "cicd-test"
+name = "foobar"
 version = "0.1.0"
 description = ""
 authors = ["btang164 <billy.tang164@gmail.com>"]
