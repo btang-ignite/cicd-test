@@ -6,4 +6,4 @@ RUN /databricks/conda/envs/dcs-minimal/bin/pip install *.whl
 
 COPY ./requirements.txt ./
 
-RUN /databricks/conda/envs/dcs-minimal/bin/pip install requirements.txt
+RUN /databricks/conda/envs/dcs-minimal/bin/pip install -r requirements.txt
