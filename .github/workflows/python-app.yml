@@ -21,7 +21,7 @@ jobs:
       with:
         python-version: 3.8
     - name: Install Poetry
-        uses: dschep/install-poetry-action@v1.2
+      uses: dschep/install-poetry-action@v1.2
     - name: Install dependencies
       run: |
         poetry install
