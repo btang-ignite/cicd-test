@@ -53,6 +53,12 @@ jobs:
         source $HOME/.poetry/env
         poetry build
 
+    - name: Create requirements.txt
+      run: |
+        export PATH="$HOME/.poetry/bin:$PATH"
+        source $HOME/.poetry/env
+        poetry export -f requirements.txt --output requirements.txt
+
     - name: Set up QEMU
       uses: docker/setup-qemu-action@v1
     - name: Set up Docker Buildx
