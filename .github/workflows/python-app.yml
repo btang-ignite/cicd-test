@@ -66,3 +66,9 @@ jobs:
       with:
         username: ${{ secrets.DOCKERHUB_USERNAME }}
         password: ${{ secrets.DOCKERHUB_TOKEN }}
+    - name: ls
+      run: ls
+    - name: find poetry version
+        export PATH="$HOME/.poetry/bin:$PATH"
+        source $HOME/.poetry/env
+        poetry --version
