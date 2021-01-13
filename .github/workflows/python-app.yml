@@ -27,12 +27,24 @@ jobs:
         export PATH="$HOME/.poetry/bin:$PATH"
         source $HOME/.poetry/env
     - name: echo PATH
-      run: echo $PATH
+      run: |
+        echo $PATH
+        export PATH="$HOME/.poetry/bin:$PATH"
+        source $HOME/.poetry/env
+        echo $PATH
     - name: Poetry version
-      run: poetry --version
+      run: |
+        export PATH="$HOME/.poetry/bin:$PATH"
+        source $HOME/.poetry/env
+        poetry --version
     - name: Install dependencies
-      run: poetry install
+      run: |
+        export PATH="$HOME/.poetry/bin:$PATH"
+        source $HOME/.poetry/env
+        poetry install
     - name: Test with pytest
       run: |
+        export PATH="$HOME/.poetry/bin:$PATH"
+        source $HOME/.poetry/env
         poetry shell
         pytest
