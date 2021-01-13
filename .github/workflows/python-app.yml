@@ -46,5 +46,4 @@ jobs:
       run: |
         export PATH="$HOME/.poetry/bin:$PATH"
         source $HOME/.poetry/env
-        poetry shell
-        pytest
+        poetry run pytest
